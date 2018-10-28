@@ -1,32 +1,31 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import First from './first';
+import Input from './todos/input';
 import Zach from './zach';
+import { Router, Link } from '@reach/router';
+
+const Header = () => (
+  <header className="App-header">
+    <img src={logo} className="App-logo" alt="logo" />
+    <p>
+      Edit <code>src/App.js</code> and save to reload.
+    </p>
+    <p>Check it out you did it dood</p>
+    <Link to="/zach">Go to zach</Link>
+    <Link to="/todos">Go to input</Link>
+  </header>
+);
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <p>Check it out you did it dood</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        <Zach initialCount={69} />
-        <Zach initialCount={0} />
-        <Zach initialCount={22} />
-        <First />
+        <Header />
+        <Router>
+          <Input path="/todos" />
+          <Zach initialCount={20} path="/zach" />
+        </Router>
       </div>
     );
   }
