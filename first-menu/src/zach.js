@@ -2,11 +2,11 @@ import React from 'react';
 
 export default class Zach extends React.Component {
   constructor(props) {
-    super(props);
-    this.setState({
+    super();
+    this.state = {
       lel: 'thats really stupid i could do it faster',
-      count: 0,
-    });
+      count: props.initialCount,
+    };
   }
   render() {
     return (

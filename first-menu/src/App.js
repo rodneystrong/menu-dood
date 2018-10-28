@@ -23,7 +23,9 @@ class App extends Component {
             Learn React
           </a>
         </header>
-        <Zach myProp={this.props.count} />
+        <Zach initialCount={69} />
+        <Zach initialCount={0} />
+        <Zach initialCount={22} />
         <First />
       </div>
     );
