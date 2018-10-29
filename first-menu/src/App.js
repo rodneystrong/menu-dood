@@ -12,6 +12,7 @@ const Header = () => (
       Edit <code>src/App.js</code> and save to reload.
     </p>
     <p>Check it out you did it dood</p>
+    <Link to="/">Go HOME</Link>
     <Link to="/zach">Go to zach</Link>
     <Link to="/todos">Go to input</Link>
   </header>

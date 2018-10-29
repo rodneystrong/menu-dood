@@ -8,6 +8,20 @@ export default class Input extends React.Component {
     };
   }
   render() {
-    return <input value={this.state.bleh} />;
+    return (
+      <input
+        value={this.state.bleh}
+        onChange={event => {
+          this.setState({
+            bleh: event.target.value,
+          });
+        }}
+        onClick={e => {
+          this.setState({
+            bleh: '',
+          });
+        }}
+      />
+    );
   }
 }
