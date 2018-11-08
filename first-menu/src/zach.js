@@ -1,28 +1,14 @@
 import React from 'react';
+import Alex from './alex';
 
-export default class Zach extends React.Component {
-  constructor(props) {
-    super();
-    this.state = {
-      lel: 'thats really stupid i could do it faster',
-      count: props.initialCount,
-    };
-  }
-  render() {
-    return (
-      <div>
-        <p>Item count: {this.state.count}</p>
-        <p>{this.state.lel}</p>
-        <button
-          onClick={() => {
-            this.setState({
-              count: this.state.count + 1,
-            });
-          }}
-        >
-          Fuck ReactJS
-        </button>
-      </div>
-    );
-  }
-}
+let Zach = () => {
+  return (
+    <div>
+      <Alex initialCount={0} />
+      <Alex initialCount={12} />
+      <Alex initialCount={90} />
+    </div>
+  );
+};
+
+export default Zach;
